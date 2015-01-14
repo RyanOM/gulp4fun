@@ -1,6 +1,100 @@
 doctype html
 html
     head
-        title Hello World!
+        title Our Gallery
+        link(href='vendor/bootstrap.min.css', rel='stylesheet')
+        link(href='css/mystyle.css', rel='stylesheet')
+        link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Tangerine')
+        link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Kaushan+Script')
     body
-        h1 We are using jade
+        .container.navbar-container
+            .navbar
+                .navbar-header
+                  button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                    span.icon-bar
+                    |         
+                    span.icon-bar
+                    |         
+                    span.icon-bar
+                  |       
+                  a.navbar-brand(href='#') BrandLogo
+                |     
+                .collapse.navbar-collapse
+                  ul.nav.navbar-nav.navbar-right
+                    li.active
+                      a(href='#') HOME
+                    li
+                      a(href='#') SOBRE
+                    li
+                      a(href='#') EMPRESSA
+                    li
+                      a(href='#about') CONTATO
+                // /.nav-collapse
+        .container
+            h1 Galeria XYZ
+            p Pequena descrição da galeria...
+            
+            .row
+                .col-xs-6.col-md-3
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/photo1.jpg', alt='')
+                  |   
+                .col-xs-6.col-md-3
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/photo2.jpg', alt='')
+                  |   
+                .col-xs-6.col-md-3
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/photo3.jpg', alt='')
+                  |   
+                .col-xs-6.col-md-3
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/photo4.jpg', alt='')
+                .col-xs-6.col-md-3
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/photo5.jpg', alt='')
+                  |   
+                .col-xs-6.col-md-3
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/photo6.jpg', alt='')
+                  |   
+                .col-xs-6.col-md-3
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/photo7.jpg', alt='')
+                  |   
+                .col-xs-6.col-md-3
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/photo8.jpg', alt='')
+
+            .row
+              nav
+                ul.pagination
+                    li
+                      a(href='#', aria-label='Previous')
+                        span(aria-hidden='true') &laquo;
+                    |     
+                    li
+                      a(href='#') 1
+                    |     
+                    li
+                      a(href='#') 2
+                    |     
+                    li
+                      a(href='#') 3
+                    |     
+                    li
+                      a(href='#') 4
+                    |     
+                    li
+                      a(href='#') 5
+                    |     
+                    li
+                      a(href='#', aria-label='Next')
+                        span(aria-hidden='true') &raquo;
+
+                      
+            .row
+                .footer
+                    hr
+                    p Empressa xyz - endereço xxxxx - 2015
+                    p todos os direitos reservados
