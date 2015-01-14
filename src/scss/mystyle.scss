@@ -1,0 +1,51 @@
+$break-small: 768px;
+$break-large: 1200px;
+
+.navbar {
+    border: grey 1px solid;
+    background: #95a5a6;
+
+    @media screen and (min-width: $break-small) {
+    	margin-top: 20px;
+    }
+
+    a {
+    	color: #fff;
+    }
+
+    li~li { 
+		border-left: 1px solid #000000; 
+	}
+
+    .nav > li > a:hover,
+    .nav > li > a:focus,
+    .nav > li > a.active {
+    	background: #9b59b6;
+    }
+}
+
+button.navbar-toggle {
+	border: 1px solid #fff;
+
+	span.icon-bar {
+		background: #fff;
+	}
+}
+.container h1 {
+	font-family: 'Tangerine', serif;
+}
+
+.container.navbar-container {
+	@media screen and (max-width: $break-small) {
+    	width: 100%;
+    	margin: 0;
+    	padding: 0;
+    }
+}
+
+
+.footer p {
+	text-align: center;
+	margin: 0;
+	font-family: 'Kaushan Script', cursive;
+}
