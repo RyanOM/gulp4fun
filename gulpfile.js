@@ -9,9 +9,15 @@ var gulp = require('gulp'),
 
 //Sass task
 gulp.task('styles', function(){
-    gulp.src('src/sass/*.scss')
+    gulp.src('src/scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('build/css'));
+});
+
+// Copy vendor css
+gulp.task('copy-vendor', function() {
+    gulp.src('src/vendor/*')
+        .pipe(gulp.dest('build/vendor'));
 });
 
 //Jade task
@@ -39,11 +45,11 @@ gulp.task('scripts', function(){
 gulp.task('serve', serve('build'));
 
 // Build task
-gulp.task('build', ['styles', 'images', 'jade', 'scripts']);
+gulp.task('build', ['styles', 'images', 'jade', 'scripts', 'copy-vendor']);
 
 //Watch Task
 gulp.task('watch', function() {
-    gulp.watch('src/*', ['build']);
+    gulp.watch('src/**', ['build']);
 });
 
 gulp.task('default', ['build', 'watch', 'serve']);
